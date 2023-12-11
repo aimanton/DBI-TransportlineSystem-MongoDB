@@ -1,4 +1,15 @@
+using TransportlineSystem.Models;
+using TransportlineSystem.Services;
+
+
+
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDBSettings"));
+builder.Services.AddSingleton<MongoDBService>();
+
+
 
 // Add services to the container.
 

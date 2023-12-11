@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TransportlineSystem",
+    "\\TransportlineSystem\\TransportlineSystem",
+    "\\TransportlineSystem\\TransportlineSystem\\Models"
+  ],
+  "SelectedNode": "\\TransportlineSystem\\TransportlineSystem\\Models\\Employee.cs",
+  "PreviewInSolutionExplorer": false
+}

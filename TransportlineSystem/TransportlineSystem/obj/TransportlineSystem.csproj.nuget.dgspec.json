@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Schulfächer\\Year 5\\DBI\\TransportlineProject\\TransportlineSystem\\TransportlineSystem\\TransportlineSystem.csproj": {}
+    "C:\\Schule\\Year5\\DBI\\DBI-TransportlineSystem-MongoDB\\TransportlineSystem\\TransportlineSystem\\TransportlineSystem.csproj": {}
   },
   "projects": {
-    "D:\\Schulfächer\\Year 5\\DBI\\TransportlineProject\\TransportlineSystem\\TransportlineSystem\\TransportlineSystem.csproj": {
+    "C:\\Schule\\Year5\\DBI\\DBI-TransportlineSystem-MongoDB\\TransportlineSystem\\TransportlineSystem\\TransportlineSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Schulfächer\\Year 5\\DBI\\TransportlineProject\\TransportlineSystem\\TransportlineSystem\\TransportlineSystem.csproj",
+        "projectUniqueName": "C:\\Schule\\Year5\\DBI\\DBI-TransportlineSystem-MongoDB\\TransportlineSystem\\TransportlineSystem\\TransportlineSystem.csproj",
         "projectName": "TransportlineSystem",
-        "projectPath": "D:\\Schulfächer\\Year 5\\DBI\\TransportlineProject\\TransportlineSystem\\TransportlineSystem\\TransportlineSystem.csproj",
+        "projectPath": "C:\\Schule\\Year5\\DBI\\DBI-TransportlineSystem-MongoDB\\TransportlineSystem\\TransportlineSystem\\TransportlineSystem.csproj",
         "packagesPath": "C:\\Users\\playe\\.nuget\\packages\\",
-        "outputPath": "D:\\Schulfächer\\Year 5\\DBI\\TransportlineProject\\TransportlineSystem\\TransportlineSystem\\obj\\",
+        "outputPath": "C:\\Schule\\Year5\\DBI\\DBI-TransportlineSystem-MongoDB\\TransportlineSystem\\TransportlineSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\playe\\AppData\\Roaming\\NuGet\\NuGet.Config",
