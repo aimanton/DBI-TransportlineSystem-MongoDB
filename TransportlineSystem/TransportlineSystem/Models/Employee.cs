@@ -6,22 +6,26 @@ namespace TransportlineSystem.Models
 
     public class Employee
     {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
         [BsonElement("e_id")]
-        public int Id { get; set; }
+        public int EmployeeId { get; set; }
+
         [BsonElement("e_firstname")]
-        public string Firstname { get; set; }
+        public string Firstname { get; set; } 
         [BsonElement("e_lastname")]
-        public string Lastname { get; set; }
+        public string Lastname { get; set; } 
         [BsonElement("e_salary")]
-        public double Salary { get; set; }
+        public double Salary { get; set; } 
         [BsonElement("j_name")]
-        public string Job {  get; set; }
+        public string Job {  get; set; } 
         [BsonElement("j_start_Date")]
         public DateTime StartDate { get; set; }
         [BsonElement("j_end_Date")]
         public DateTime EndDate { get; set; }
         [BsonElement("transportline")]
-        public Transportline Transportlines { get; set; }
+        public Transportlines Transportline { get; set; }
 
         /* 
         public Employee Clone() {
@@ -30,7 +34,7 @@ namespace TransportlineSystem.Models
         }
         */
     }
-    public class Transportline
+    public class Transportlines
     {
         [BsonElement("tl_id")]
         public int Id { get; set; }

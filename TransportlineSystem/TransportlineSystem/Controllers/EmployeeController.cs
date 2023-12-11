@@ -10,19 +10,30 @@ namespace TransportlineSystem.Controllers
     [Route("api/[controller]")]
     public class EmployeeController : Controller
     {
-        private readonly MongoDBService _mongoDBService;
+        private readonly EmployeeService _employeeService;
 
-        public EmployeeController(MongoDBService mongoDBService) 
-        { 
-           _mongoDBService = mongoDBService;    
-        
+        public EmployeeController(EmployeeService employeeService) 
+        {
+            _employeeService = employeeService;    
         }
 
         [HttpGet]
-        public async Task<List<Employee>> GetAll() { }
+        public async Task<List<Employee>> GetAll() { 
+            return await _employeeService.GetAllAsync();
+        }
 
         [HttpPost]
+        public async Task<IActionResult> CreateEmp([FromBody] Employee employee) {
+            await _employeeService.CreateEmp(employee);
+            return CreatedAtAction(nameof(GetAll), new { id = employee.Id }, employee);
+        }
 
-        public async Task<IActionResult> Post([FromBody] Employee employee) { }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(string id) {
+            
+            await _employeeService.DeleteAsync(id);
+            return NoContent();
+        }
+
     }
 }
