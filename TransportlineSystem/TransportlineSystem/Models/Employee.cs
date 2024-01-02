@@ -27,12 +27,6 @@ namespace TransportlineSystem.Models
         [BsonElement("transportline")]
         public Transportlines Transportline { get; set; }
 
-        /* 
-        public Employee Clone() {
-         var clone = this.MemberwiseClone();
-            return (Employee)clone;
-        }
-        */
     }
     public class Transportlines
     {

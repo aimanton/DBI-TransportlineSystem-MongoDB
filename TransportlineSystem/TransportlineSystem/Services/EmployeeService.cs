@@ -29,13 +29,30 @@ namespace TransportlineSystem.Services
             return;
         }
 
+        public async Task UpdateEmp(string id, Employee updateEmployee)
+        {
+            FilterDefinition<Employee> filter = Builders<Employee>.Filter.Eq("EmployeeId", id);
+            UpdateDefinition<Employee> update = Builders<Employee>.Update
+                .Set("e_firstname", updateEmployee.Firstname)
+                .Set("e_lastname", updateEmployee.Lastname)
+                .Set("j_name", updateEmployee.Job)
+                .Set("e_salary", updateEmployee.Salary)
+                .Set("transportline.tl_id", updateEmployee.Transportline.Id)
+                .Set("transportline.tl_name", updateEmployee.Transportline.TransportlineName);
+            await _employeeCollection.UpdateManyAsync(filter, update);
+            return;
+        }
+
         public async Task DeleteAsync(string id)
         {
             FilterDefinition<Employee> filter = Builders<Employee>.Filter.Eq("EmployeeId", id);
             await _employeeCollection.DeleteOneAsync(filter);
             return;
-            
+
         }
 
+
+
     }
-}
+
+} 
