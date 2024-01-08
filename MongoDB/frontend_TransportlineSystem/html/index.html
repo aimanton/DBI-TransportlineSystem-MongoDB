@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project - Transportline</title>
+  <link rel="icon" type="image/vnd.microsoft.icon" href="../img/icon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/receipt/employee-create.js"></script>
+  <script src="../js/receipt/employee-read.js"></script>
+  <script src="../js/receipt/employee-delete.js"></script>
+  <script src="../js/receipt/employee-update.js"></script>
+  <script src="../js/app/loader.js"></script>
+</head>
+
+<body>
+  <div id="page-container">
+    <div id="content-wrap">
+      <nav class="navbar navbar-expand-md navbar-custom navbar-dark border-bottom border-top">
+        <a class="navbar-brand"><i class="fas fa-asterisk"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active">Employees</a>
+            </li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="parent1">
+        <div class="child1">
+          <div class="header-box">
+            <h1>Employee Manager</h1>
+          </div>
+          <div class="create-update-box">
+            <div id="create-update">
+              <form id="add-to-employees-form" method="post">
+                <div class="form-group">
+                  <label for="firstname" class="mr-sm-2">Firstname:</label>
+                  <input type="text" class="form-control" id="firstname"
+                    placeholder="Enter firstname" required />
+                </div>
+                <div class="form-group">
+                  <label for="lastname" class="mr-sm-2">Lastname:</label>
+                  <input type="text" class="form-control" id="lastname"
+                    placeholder="Enter lastname" required />
+                </div>
+                <div class="form-group">
+                  <label for="salary" class="mr-sm-2">Salary:</label>
+                  <input type="number" class="form-control" id="salary"
+                    placeholder="Enter Salary" required />
+                </div>
+                <div class="form-group">
+                  <label for="job" class="mr-sm-2">Job:</label>
+                  <input type="text" class="form-control" id="job"
+                    placeholder="Enter Job" required />
+                </div>
+                <div class="form-group">
+                  <label for="transportlineName" class="mr-sm-2">Transportline Name:</label>
+                  <input type="text" class="form-control" id="transportlineName"
+                    placeholder="Enter transportlineName" required />
+                </div>
+              </form>
+              <button id="btn-add" onclick="submitForm()" class="btn-add button-custom">Create</button>
+              <button id="btn-update" class="hidden btn-update-final button-custom">Update</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="child2">
+          <div id="entries" class="entries-box">
+            <h2 class="border-bottom">Entries</h2>
+            <div class="table-responsiv-sm">
+              <table class="table table-sm table-hover table-dark table-borderless table-custom">
+                <thead>
+                  <tr>
+                    <th scope="col">Firstname</th>
+                    <th scope="col">Lastname</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">Job</th>
+                    <th scope="col">Transportline</th>
+                    <th scope="col">Operations</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody-file"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="child1">
+          <div class="console-out-box2">
+            <h2 class="border-bottom">Console</h2>
+            <div id="console" class="console-in-box2">
+              <div class="grey">{Connected}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="border-bottom border-top">
+      <p>&copy; 2024 Transportline</p>
+    </footer>
+  </div>
+
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+
+</body>

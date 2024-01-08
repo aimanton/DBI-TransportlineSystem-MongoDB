@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\TransportlineSystem"
+    "\\TransportlineSystem",
+    "\\TransportlineSystem\\.idea",
+    "\\TransportlineSystem\\TransportlineSystem",
+    "\\TransportlineSystem\\TransportlineSystem\\Models"
   ],
-  "SelectedNode": "\\TransportlineSystem\\TransportlineSystem.sln",
+  "SelectedNode": "\\TransportlineSystem\\TransportlineSystem\\Models\\Employee.cs",
   "PreviewInSolutionExplorer": false
 }

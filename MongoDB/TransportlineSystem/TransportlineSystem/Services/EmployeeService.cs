@@ -37,7 +37,6 @@ namespace TransportlineSystem.Services
                 .Set("e_lastname", updateEmployee.Lastname)
                 .Set("j_name", updateEmployee.Job)
                 .Set("e_salary", updateEmployee.Salary)
-                .Set("transportline.tl_id", updateEmployee.Transportline.Id)
                 .Set("transportline.tl_name", updateEmployee.Transportline.TransportlineName);
             await _employeeCollection.UpdateManyAsync(filter, update);
             return;

@@ -7,6 +7,22 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDBSettings"));
 builder.Services.AddSingleton<EmployeeService>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularOrigins",
+    builder =>
+    {
+        builder.WithOrigins(
+                            "http://127.0.0.1:5500"
+                            )
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+    });
+});
+
+// UseCors
+
+
 
 
 // Add services to the container.
@@ -30,5 +46,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("AllowAngularOrigins");
 
 app.Run();
