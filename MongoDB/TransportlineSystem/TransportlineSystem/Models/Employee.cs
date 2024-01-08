@@ -20,10 +20,6 @@ namespace TransportlineSystem.Models
         public double Salary { get; set; } 
         [BsonElement("j_name")]
         public string Job {  get; set; } 
-        [BsonElement("j_start_Date")]
-        public DateTime StartDate { get; set; }
-        [BsonElement("j_end_Date")]
-        public DateTime EndDate { get; set; }
         [BsonElement("transportline")]
         public Transportlines Transportline { get; set; }
 
