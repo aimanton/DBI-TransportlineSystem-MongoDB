@@ -1,0 +1,28 @@
+{
+"Employee": [
+    {
+      "e_id":1,
+      "e_firstname": "John",
+      "e_lastname": "Doe",
+      "e_salary": 50000,
+      "j_name":"Traindriver",
+      "j_start_Date": "2023-01-01",
+      "j_end_date": "2023-12-31",
+              "transportline": {
+                  "tl_id":1,
+                  "tl_name": "U3",
+                  "stations": [
+                    {
+                      "st_id": 1,
+                      "st_name": "oida",
+                      "district": "Simmering"
+                        }
+                   ]
+     }   
+    }
+ ]
+}  
+ 
+
+ 
+ 
